@@ -121,7 +121,7 @@ if [[ -z "${CNI_URL}" ]]; then
   else
     echo "[CNI] CNI_RELEASE ${CNI_RELEASE} is a Release version"
     CNI_URL=https://github.com/${CNI_REPO}/releases/download/${CNI_RELEASE}/cni-${ARCH}-${CNI_RELEASE}.tgz
-    if [[ -n "${CNI_RELEASE/v0.[0-5].[0-9]/}" ]]; then
+    if [[ -n "${CNI_RELEASE/v0.[0-6].[0-9]/}" ]]; then
       CNI_PLUGINS_URL=https://github.com/${CNI_PLUGINS_REPO}/releases/download/${CNI_RELEASE}/cni-plugins-${ARCH}-${CNI_RELEASE}.tgz
     fi
   fi
